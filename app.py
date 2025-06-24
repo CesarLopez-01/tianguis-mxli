@@ -75,7 +75,7 @@ Draw(
         "marker": False,
         "circlemarker": True
     },
-    edit_options={"edit": False, "remove": False},
+    edit_options={"edit": True, "remove": False},
 ).add_to(m)
 
 # Añade marcadores
@@ -146,7 +146,7 @@ legend_html = f"""
 m.get_root().html.add_child(folium.Element(legend_html))
 
 # Mostrar mapa
-map_data = st_folium(m, width=1200, height=600, returned_objects=["all_drawings"])
+map_data = st_folium(m, width=1200, height=600)
 
 coords_clicked = ""
 if map_data and "all_drawings" in map_data:
