@@ -13,7 +13,7 @@ from folium import Element
 conn = st.connection("gsheets", type=GSheetsConnection)
 existing_data = conn.read(worksheet="Tianguis", usecols=list(range(6)), ttl=1800)
 existing_data = existing_data.dropna(how="all")
-df = existing_data.head(95)
+df = existing_data
 
 st.set_page_config(layout="wide")
 st.markdown("# Nuevo registro para Tianguis en Mexicali")
