@@ -146,7 +146,7 @@ legend_html = f"""
 m.get_root().html.add_child(folium.Element(legend_html))
 
 # Mostrar mapa
-map_data = st_folium(m, width=1200, height=600)
+map_data = st_folium(m, width=1200, height=600, return_map_data=["all_drawings"])
 
 coords_clicked = ""
 if map_data and "all_drawings" in map_data:
